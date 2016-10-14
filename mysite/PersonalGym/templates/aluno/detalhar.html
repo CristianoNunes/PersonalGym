@@ -1,0 +1,46 @@
+{%extends 'layout.html'%}
+{% block conteudo %}
+<div class="row">
+	<div class="col-lg-12">
+		<h1 class="page-header">Aluno</h1>
+	</div>
+	<!-- /.col-lg-12 -->
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Detalhes
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-lg-6">
+						<form role="form">
+							<fieldset disabled>
+								<div class="form-group">
+									<label for="disabledSelect">Nome</label>
+									<input class="form-control" id="id_nome" name="nome" type="text" placeholder="{{aluno.nome}}" disabled>
+								</div>
+								<div class="form-group">
+									<label for="disabledSelect">Idade</label>
+									<input class="form-control" id="id_idade" name="idade" type="number" placeholder="{{aluno.idade}}" disabled>
+								</div>
+								<div class="form-group">
+									<label for="disabledSelect">Sexo</label>
+									<input class="form-control" id="id_sexo" name="sexo" type="text" placeholder="{{aluno.sexo}}" disabled>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+				<a href="{% url 'aluno_listar' %}" class="btn btn-primary">Voltar</a>
+				<a href="{% url 'aluno_editar' aluno.pk %}" class="btn btn-warning">Editar</a>
+				<a href="{% url 'aluno_apagar' aluno.pk %}" class="btn btn-danger">Excluir</a>
+			</div>
+		</div>
+		<!-- /.table-responsive -->
+	</div>
+	<!-- /.panel-body -->
+</div>
+<!-- /.panel -->
+{% endblock%}

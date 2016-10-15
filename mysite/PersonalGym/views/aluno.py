@@ -25,7 +25,7 @@ def adicionar(request):
             return redirect(reverse('aluno_listar'))
     else:
         form = AlunoForm()
-    return render(request, 'aluno/form.html', {'form': form})
+    return render(request, 'aluno/adicionar.html', {'form': form})
 
 
 def editar(request, pk):
@@ -37,7 +37,7 @@ def editar(request, pk):
             return redirect(reverse('aluno_listar'))
     else:
         form = AlunoForm(instance=aluno)
-    return render(request, 'aluno/form.html', {'form': form})
+    return render(request, 'aluno/editar.html', {'form': form})
 
 
 def apagar(request, pk):

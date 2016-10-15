@@ -28,14 +28,14 @@
 							{% for aluno in alunos %}
 							<tr>
 								<td>{{ aluno.nome }}</td>
-								<td>{{aluno.idade}}</td>
-								<td>{{aluno.sexo}}</td>
-								<th><a href="{% url 'aluno_detalhar' aluno.pk %}"  class="btn btn-success">Detalhes</a></th>
+								<td>{{ aluno.idade }}</td>
+								<td>{{ aluno.sexo }}</td>
+								<td><a href="{% url 'aluno_detalhar' aluno.pk %}"  class="btn btn-primary">Detalhes</a></td>
 							</tr>
 							{% endfor %}
 						</tbody>
 					</table>
-					<a href="{% url 'aluno_adicionar' %}" class="btn btn-primary">Adicionar</a>
+					<a href="{% url 'aluno_adicionar' %}" class="btn btn-success">Adicionar</a>
 				</div>
 				<!-- /.table-responsive -->
 			</div>

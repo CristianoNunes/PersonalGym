@@ -5,7 +5,7 @@ from django.utils import timezone
 class Aluno(models.Model):
     nome = models.CharField(max_length=100)
     idade = models.IntegerField()
-    sexo = models.CharField(max_length=1)
+    sexo = models.CharField(max_length=9)
 
 
 class Exercicio(models.Model):
